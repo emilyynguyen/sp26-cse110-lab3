@@ -4,6 +4,10 @@
     <head>
         <title>Lab 2 - Meeting</title>
         <meta name="description" content="A website to call meeting about a potential matcha website, including features wanted and potential issues we may run into.">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     </head>
   
     <body>
@@ -11,17 +15,19 @@
             <h1>Matcha Website Dev Meeting 1</h1>
             <p>This meeting is about <strong>the potential matcha website that'll launch to help everyone interested in matcha, regardless of their experience levels and knowledge.</strong></p>
             <p>The date of this meeting will be on <b>April 1st, 2026</b>.</p>
-            <p>Here are the audio recordings from the meeting:</p>
         </main>
         
-        <audio controls>
-            <source src="aespa.mp3" type="audio/mpeg">
-        </audio>
+        <div class="audio">
+            <p>Here are the audio recordings from the meeting:</p>
+            <audio controls>
+                <source src="aespa.mp3" type="audio/mpeg">
+            </audio>
 
-        <details>
-            <summary>NOTE TO TAs</summary>
+            <details>
+                <summary>NOTE TO TAs</summary>
                 <p>This isn't an actual audio recording, it's just a song!</p>
-        </details>
+            </details>
+        </div>
 
         <nav aria-label="Main Navigation">
         <ul>
@@ -103,10 +109,12 @@
 
             <details>
                 <summary>Click to see images of my creations</summary>
+                <div class="image-grid">
                     <img src="IMG_2367.JPG" width="300" alt="My yummy banana pudding matcha">
                     <p>Banana Pudding Matcha</p>
                     <img src="IMG_2449.JPG" width="300" alt="My yummy biscoff pudding matcha">
                     <p>Biscoff Pudding Matcha!</p>
+                </div>
             </details>
         </section>
 
