@@ -293,21 +293,8 @@ a {
     text-underline-offset: 3px;
 }
  
-/* ── Footer ──────────────────────────────── */
-footer {
-    margin-top: var(--spacing-lg);
-    text-align: center;
-    /* color name for muted footer text */
-    color: darkgray;
-    font-size: 0.9rem;
-    /* background-color using rgba for a subtle tinted strip */
-    background-color: rgba(74, 124, 89, 0.08);
-    padding: var(--spacing-sm);
-    border-radius: var(--radius);
-}
 
 /* ── Responsiveness ──────────────────────── */
-
 /* Big screens (desktops and tablets) */
 @media (max-width: 768px) {
     body {
@@ -350,5 +337,64 @@ footer {
     textarea,
     select {
         width: 100%;             
+    }
+}
+
+/* ── Selectors ───────────────────────────── */
+
+/* moves audio bar to the end*/
+audio[controls] {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* applies the same style to both h2 and h3 */
+h2, h3 {
+    border-bottom: 1px solid var(--color-primary-light, #7ab893);
+    padding-bottom: 4px;
+}
+
+/*  only direct li children of nav ul */
+nav > ul > li {
+    list-style: none;
+}
+
+/* General Sibling Combinator */
+h3 ~ p {
+    font-style: italic;
+    color: var(--color-text-muted, #6b6b6b);
+}
+
+/* Adjacent Sibling Combinator: (image captions) */
+img + p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted, #6b6b6b);
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* Combining Two Selectors  */
+section#remarks {
+    border-left: 4px solid var(--color-accent, rgb(212, 175, 55));
+}
+
+/* :has() - style sections that contain an image inside them */
+section:has(img) {
+    background-color: hsla(45, 60%, 96%, 0.85);
+}
+
+/* Nested Selectors */
+footer {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    color: darkgray;
+    font-size: 0.9rem;
+    background-color: rgba(74, 124, 89, 0.08);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+
+    & p {
+        margin: 0;
+        letter-spacing: 0.5px;
     }
 }
