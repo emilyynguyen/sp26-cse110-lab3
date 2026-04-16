@@ -253,7 +253,7 @@ video {
     margin: var(--spacing-sm) 0;
     border-radius: var(--radius);
     max-width: 100%;
-    min-width: none;
+    min-width: 0;
     justify-content: center;
 }
  
@@ -392,9 +392,4 @@ footer {
     background-color: rgba(74, 124, 89, 0.08);
     padding: var(--spacing-sm);
     border-radius: var(--radius);
-
-    & p {
-        margin: 0;
-        letter-spacing: 0.5px;
-    }
 }
